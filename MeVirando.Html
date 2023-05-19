@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contabilizar Idade</title>
+</head>
+
+<body>
+    
+    <h1>Quantos anos eu tenho?</h1>
+    <h3>Digite o ano que voce nasceu: </h3>
+    <input type="number" id="year">
+    <input type="button" value="Confirmar" onclick="confirm()">
+    <p id="result"></p>
+
+    <script>
+        var newdate = new Date().getFullYear();
+        var year = window.document.querySelector('#year');
+        var result = window.document.getElementById ('result');
+
+        function confirm () { 
+            var calculus = newdate - year.value
+
+            if (year.value > newdate) {
+                alert (`Esse ano ainda nao chegou`)
+            }else{
+                result.innerHTML = (`Quem nasceu no ano de ${year.value} tem ${calculus} de idade`);
+            }
+            
+        }
+
+    </script>
+
+
+
+    
+</body>
+
+</html>
